@@ -1,4 +1,7 @@
 body {
-  background-color: #000;
-  color: #242424;
+  background-color: gray;
+}
+
+h1 {
+  color: white;
 }
