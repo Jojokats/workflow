@@ -5,6 +5,8 @@ var reload = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
 // var browserify = require('gulp-browserify');
 var clean = require('gulp-clean');
+var concat = require('gulp-concat');
+
 
 var SOURCEPATHS = {
   sassSource : 'src/scss/*.scss',
@@ -28,8 +30,6 @@ gulp.task('clean-scripts', function() {
     .pipe(clean());
 });
 
-
-
 gulp.task('sass', function(){
   return gulp.src(SOURCEPATHS.sassSource)
   .pipe(autoprefixer())
@@ -39,6 +39,7 @@ gulp.task('sass', function(){
 
 gulp.task('scripts', ['clean-scripts'], function() {
   gulp.src(SOURCEPATHS.jsSource)
+  .pipe(concat('main.js'))
     .pipe(gulp.dest(APPPATH.js))
 });
 
