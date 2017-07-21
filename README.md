@@ -1,7 +1,8 @@
 # My Personal Workflow with SASS, NPM and Gulp
 My Web Workflow with NPM, SASS, Gulp and More
 
-#Instructions
+# Instructions
+
 1. - Clone this repo or download it from this website.
 2. - Make sure you have these installed:
       - [node.js] (https://nodejs.org/)
